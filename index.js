@@ -50,7 +50,7 @@ var iconurl = `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
 
 var cardTemplate = document.createElement('div');
 var cBody = document.createElement('div');
-
+historyFetch(weather, city);
 }
 
 
@@ -66,6 +66,11 @@ function handleFormSubmit(e) {
 };
 
 //function to display history
+
+function historyFetch(weather, city){
+    var historyCall = `api.openweathermap.org/data/2.5/forecast?id=${city}&appid=${apiKey}`;
+    console.log(historyCall);
+}
 
 //function to add history to local storage
 
