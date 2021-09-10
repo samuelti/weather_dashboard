@@ -69,7 +69,7 @@ function handleFormSubmit(e) {
 
 function historyFetch(weather, city){
     var historyCall = `api.openweathermap.org/data/2.5/forecast?id=${city}&appid=${apiKey}`;
-    console.log(historyCall);
+    Fetch(historyCall).then((res)=>res.json()).then((data)=> console.log(data))
 }
 
 //function to add history to local storage
